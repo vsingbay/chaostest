@@ -50,7 +50,7 @@ int main()
     sf::Font font;
 
     sf::Text text;
-
+    sf::Text secondText;
    //font.loadFromFile("Star Shield.ttf");
     if (!font.loadFromFile("fonts/KOMIKAP_.ttf"))
     {
@@ -63,6 +63,14 @@ int main()
     text.setFillColor(sf::Color::White);
     text.setStyle(sf::Text::Bold | sf::Text::Underlined);
     text.setPosition(0, 0);
+
+    secondText.setFont(font);
+    secondText.setString("Now Click a fourth point!!!");
+    secondText.setCharacterSize(40);
+    secondText.setFillColor(sf::Color::White);
+    secondText.setStyle(sf::Text::Bold | sf::Text::Underlined);
+    secondText.setPosition(0, 50);
+    
     while (window.isOpen())
     {
        // window.draw(text);
@@ -153,11 +161,16 @@ int main()
             window.draw(rect);
         }
 
+        if (vertices.size() == 3)
+        {
+            window.draw(secondText);
+        }
+
         for (int i = 0; i < points.size(); i++)
         {
             RectangleShape rect(Vector2f(10, 10));
             rect.setPosition(Vector2f(points[i].x, points[i].y));
-            rect.setFillColor(Color::Blue);
+            rect.setFillColor(Color::Magenta);
             window.draw(rect);
         }
        
