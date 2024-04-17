@@ -60,17 +60,17 @@ int main()
     text.setFont(font);
     text.setString("Click any three points");
     text.setCharacterSize(40);
-    text.setFillColor(sf::Color::White);
+    text.setFillColor(sf::Color::Green);
     text.setStyle(sf::Text::Bold | sf::Text::Underlined);
     text.setPosition(0, 0);
 
     secondText.setFont(font);
     secondText.setString("Now Click a fourth point!!!");
     secondText.setCharacterSize(40);
-    secondText.setFillColor(sf::Color::White);
+    secondText.setFillColor(sf::Color::Cyan);
     secondText.setStyle(sf::Text::Bold | sf::Text::Underlined);
     secondText.setPosition(0, 50);
-    
+
     while (window.isOpen())
     {
        // window.draw(text);
