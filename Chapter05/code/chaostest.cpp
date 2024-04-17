@@ -41,8 +41,8 @@ int main()
     RenderWindow window(vm, "Chaos Game!!", Style::Default);
 
     View view;
-	view.setSize(1920.0, 1080.0);
-	view.setCenter(1920.0 / 2.0, 1080.0 / 2.0);
+	 view.setSize(VideoMode::getDesktopMode().width, VideoMode::getDesktopMode().height);
+ view.setCenter(VideoMode::getDesktopMode().width / 2, VideoMode::getDesktopMode().height / 2);
 	window.setView(view);
 
     vector<Vector2f> vertices;
